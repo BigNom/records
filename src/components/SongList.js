@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 const songListStyles = {
   display: "flex",
   flexDirection: "row",
   flexWrap: "wrap",
-  justifyContent: "center"
+  justifyContent: "center",
 }
 
 const songCardStyles = {
@@ -19,9 +19,11 @@ class SongList extends Component {
   render() {
     const { songs } = this.props
     const songIds = Object.keys(songs)
+
     return (
       <div>
-        <h1 style={{marginBottom: "0.5em"}}>Songs</h1>
+        <h1 style={{ marginBottom: "0.5em" }}>Songs</h1>
+
         <div style={songListStyles}>
           {songIds.map((id) => {
             const song = songs[id]
@@ -33,8 +35,8 @@ class SongList extends Component {
           })}
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default SongList;
+export default SongList
